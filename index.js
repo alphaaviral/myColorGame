@@ -22,10 +22,7 @@ function newGame() {
 
   x = Math.floor(Math.random() * 6 + 1);
 
-  correctColor = t[x-1].style.background; //yaha tak ho gyaa
-  console.log(x);
-  console.log(correctColor);
-
+  correctColor = t[x-1].style.background;
   document.getElementById("header-clue").innerHTML = correctColor;
 }
 
