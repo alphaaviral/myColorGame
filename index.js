@@ -40,6 +40,7 @@ t[i].addEventListener("click", function clickAction() {
     counter.innerHTML = "Incorrect Guesses : " + y;
     x = Math.floor(Math.random() * 6 + 1);
     correctColor = t[x-1].style.background;
+    document.getElementById("header-clue").innerHTML = "Your color code is... " + correctColor;
   }
 });
 }
