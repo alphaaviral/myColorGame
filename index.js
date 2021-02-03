@@ -48,7 +48,7 @@
             for(let p=0; p<6; p++){
               t[p].style.background = "transparent";
             }
-            document.getElementById("header-clue").innerHTML = "Game Over";
+            document.getElementById("header-clue").innerHTML = "Game Over. Click on New Game to start a new one.";
             m=1;
           }
         else {x = Math.floor(Math.random() * 6 + 1);
