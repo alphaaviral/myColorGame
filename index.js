@@ -5,6 +5,7 @@ let result = document.getElementById("result");
 let counter = document.getElementById("counter");
 let button = document.getElementById("refButton");
 let y;
+let z;
 function getRandomColor() {
   let letters = "0123456789ABCDEF";
   let color = "#";
@@ -21,9 +22,9 @@ function newGame() {
       t[i].style.background = getRandomColor();
   }
 
-  x = Math.floor(Math.random() * 6 + 1);
+  z = Math.floor(Math.random() * 6 + 1);
 
-  correctColor = t[x-1].style.background;
+  correctColor = t[z-1].style.background;
   document.getElementById("header-clue").innerHTML = "Your color code is... " + correctColor;
 }
 
@@ -34,11 +35,11 @@ t[i].addEventListener("click", function clickAction() {
     t[b].style.background = correctColor;
     }
   } else {
-    t[i].style.background = "Transparent";
+    t[i].style.background = getRandomColor();
     y++
     counter.innerHTML = "Incorrect Guesses : " + y;
-    t[i].removeEventListener("click", clickAction);
+    x = Math.floor(Math.random() * 6 + 1);
+    correctColor = t[x-1].style.background;
   }
 });
 }
-
