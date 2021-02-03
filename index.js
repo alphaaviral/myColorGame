@@ -34,7 +34,7 @@ t[i].addEventListener("click", function clickAction() {
     t[b].style.background = correctColor;
     }
   } else {
-    t[i].style.background = "black";
+    t[i].style.background = "Transparent";
     y++
     counter.innerHTML = "Incorrect Guesses : " + y;
     t[i].removeEventListener("click", clickAction);
